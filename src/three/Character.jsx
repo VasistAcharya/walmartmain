@@ -112,58 +112,25 @@ export default function Character({
         {/* Body (torso) - casual shirt base with better proportions */}
         <Cylinder args={[0.26, 0.30, 0.85, 32]} position={[0, 1.22, 0]}>
           <meshStandardMaterial 
-            color="#F0F8FF" 
+            color="#ffffffff" 
             roughness={0.8}
             metalness={0.05}
           />
         </Cylinder>
         
-        {/* Modern plaid pattern - more realistic grid */}
-        {/* Horizontal stripes - darker blue */}
-        <Box args={[0.52, 0.06, 0.02]} position={[0, 1.48, 0.30]}>
-          <meshStandardMaterial color="#1E3A8A" roughness={0.9} />
-        </Box>
-        <Box args={[0.52, 0.06, 0.02]} position={[0, 1.32, 0.30]}>
-          <meshStandardMaterial color="#1E3A8A" roughness={0.9} />
-        </Box>
-        <Box args={[0.52, 0.06, 0.02]} position={[0, 1.16, 0.30]}>
-          <meshStandardMaterial color="#1E3A8A" roughness={0.9} />
-        </Box>
-        <Box args={[0.52, 0.06, 0.02]} position={[0, 1.00, 0.30]}>
-          <meshStandardMaterial color="#1E3A8A" roughness={0.9} />
-        </Box>
-        
-        {/* Vertical stripes - red accent */}
-        <Box args={[0.06, 0.65, 0.015]} position={[-0.16, 1.24, 0.305]}>
-          <meshStandardMaterial color="#DC2626" roughness={0.9} />
-        </Box>
-        <Box args={[0.06, 0.65, 0.015]} position={[-0.05, 1.24, 0.305]}>
-          <meshStandardMaterial color="#DC2626" roughness={0.9} />
-        </Box>
-        <Box args={[0.06, 0.65, 0.015]} position={[0.05, 1.24, 0.305]}>
-          <meshStandardMaterial color="#DC2626" roughness={0.9} />
-        </Box>
-        <Box args={[0.06, 0.65, 0.015]} position={[0.16, 1.24, 0.305]}>
-          <meshStandardMaterial color="#DC2626" roughness={0.9} />
-        </Box>
-        
-        {/* Shirt collar - more realistic */}
-        <Box args={[0.32, 0.12, 0.025]} position={[0, 1.62, 0.305]}>
-          <meshStandardMaterial color="#E5E7EB" roughness={0.7} />
-        </Box>
         
         {/* Shirt buttons - smaller, more realistic */}
         <Sphere args={[0.015, 12, 12]} position={[0, 1.52, 0.32]}>
-          <meshStandardMaterial color="#F3F4F6" metalness={0.1} />
+          <meshStandardMaterial color="#000000ff" metalness={0.1} />
         </Sphere>
         <Sphere args={[0.015, 12, 12]} position={[0, 1.40, 0.32]}>
-          <meshStandardMaterial color="#F3F4F6" metalness={0.1} />
+          <meshStandardMaterial color="#000000ff" metalness={0.1} />
         </Sphere>
         <Sphere args={[0.015, 12, 12]} position={[0, 1.28, 0.32]}>
-          <meshStandardMaterial color="#F3F4F6" metalness={0.1} />
+          <meshStandardMaterial color="#000000ff" metalness={0.1} />
         </Sphere>
         <Sphere args={[0.015, 12, 12]} position={[0, 1.16, 0.32]}>
-          <meshStandardMaterial color="#F3F4F6" metalness={0.1} />
+          <meshStandardMaterial color="#000000ff" metalness={0.1} />
         </Sphere>
         
         {/* Head - better proportions matching reference */}
@@ -200,10 +167,10 @@ export default function Character({
         
         {/* Eyebrows - thicker, more natural */}
         <Box args={[0.055, 0.025, 0.01]} position={[-0.06, 2.025, 0.235]}>
-          <meshStandardMaterial color="#654321" />
+          <meshStandardMaterial color="#000000ff" />
         </Box>
         <Box args={[0.055, 0.025, 0.01]} position={[0.06, 2.025, 0.235]}>
-          <meshStandardMaterial color="#654321" />
+          <meshStandardMaterial color="#000000ff" />
         </Box>
         
         {/* Nose - more defined and realistic */}
@@ -272,7 +239,7 @@ export default function Character({
         {/* Modern jeans with better proportions and walking animation */}
         <Cylinder 
           args={[0.11, 0.11, 0.72, 24]} 
-          position={[-0.12, 0.36, isMoving ? Math.sin(time * 5) * 0.06 : 0]}
+          position={[-0.12, 0.456, isMoving ? Math.sin(time * 5) * 0.06 : 0]}
           rotation={[isMoving ? Math.sin(time * 5) * 0.2 : 0, 0, 0]}
         >
           <meshStandardMaterial color="#1E40AF" roughness={0.85} />
@@ -280,7 +247,7 @@ export default function Character({
         
         <Cylinder 
           args={[0.11, 0.11, 0.72, 24]} 
-          position={[0.12, 0.36, isMoving ? Math.sin(time * 5 + Math.PI) * 0.06 : 0]}
+          position={[0.12, 0.456, isMoving ? Math.sin(time * 5 + Math.PI) * 0.06 : 0]}
           rotation={[isMoving ? Math.sin(time * 5 + Math.PI) * 0.2 : 0, 0, 0]}
         >
           <meshStandardMaterial color="#1E40AF" roughness={0.85} />
@@ -343,10 +310,10 @@ export default function Character({
         </Cylinder>
         
         {/* Better hands positioning and details */}
-        <Sphere args={[0.065, 16, 16]} position={[-0.38, 1.13, 0]}>
+        <Sphere args={[0.065, 16, 16]} position={[-0.43, 1.03, 0]}>
           <meshStandardMaterial color="#FDBCB4" roughness={0.9} />
         </Sphere>
-        <Sphere args={[0.065, 16, 16]} position={[0.38, 1.13, 0]}>
+        <Sphere args={[0.065, 16, 16]} position={[0.43, 1.03, 0]}>
           <meshStandardMaterial color="#FDBCB4" roughness={0.9} />
         </Sphere>
         
@@ -367,17 +334,9 @@ export default function Character({
           <meshStandardMaterial color="#000000" metalness={0.9} roughness={0.1} />
         </Cylinder>
         
-        {/* Phone in hand (modern touch) */}
-        <Box args={[0.025, 0.05, 0.008]} position={[0.375, 1.10, 0.03]}>
-          <meshStandardMaterial color="#1F2937" metalness={0.8} roughness={0.2} />
-        </Box>
-        {/* Phone screen */}
-        <Box args={[0.02, 0.04, 0.002]} position={[0.375, 1.10, 0.035]}>
-          <meshStandardMaterial color="#3B82F6" emissive="#1E40AF" emissiveIntensity={0.2} />
-        </Box>
         
       </group>
-      
+      s
       {/* Walking indicator - subtle movement effect when moving */}
       {isMoving && (
         <group position={[0, 0.08, 0]}>
