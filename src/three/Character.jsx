@@ -328,7 +328,7 @@ export default function Character({
         {/* Enhanced arms with better proportions and animation */}
         <Cylinder 
           args={[0.075, 0.075, 0.62, 20]} 
-          position={[-0.33, 1.42, 0]} 
+          position={[0.33, 1.32, 0]} 
           rotation={[isMoving ? Math.sin(time * 5 + Math.PI) * 0.25 : 0, 0, Math.PI / 10]}
         >
           <meshStandardMaterial color="#FDBCB4" roughness={0.9} />
@@ -336,7 +336,7 @@ export default function Character({
         
         <Cylinder 
           args={[0.075, 0.075, 0.62, 20]} 
-          position={[0.33, 1.42, 0]} 
+          position={[-0.33, 1.32, 0]} 
           rotation={[isMoving ? Math.sin(time * 5) * 0.25 : 0, 0, -Math.PI / 10]}
         >
           <meshStandardMaterial color="#FDBCB4" roughness={0.9} />

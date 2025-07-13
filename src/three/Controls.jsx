@@ -81,9 +81,9 @@ export default function Controls({
     let lastY = 0;
 
     const handleMouseDown = (e) => {
-      // Only respond to right mouse button for camera rotation
-      if (e.button !== 2) return;
-      
+      // Only respond to left mouse button for camera rotation
+      if (e.button !== 0) return;
+
       isDragging = true;
       lastX = e.clientX;
       lastY = e.clientY;
@@ -91,15 +91,15 @@ export default function Controls({
       // Prevent default behavior and stop propagation
       e.preventDefault();
       e.stopPropagation();
-      
-      console.log('Right-click down - starting camera rotation'); // Debug log
+
+      console.log('Left-click down - starting camera rotation'); // Debug log
     };
 
     const handleMouseUp = (e) => {
-      if (e.button !== 2) return;
+      if (e.button !== 0) return;
       
       isDragging = false;
-      console.log('Right-click up - stopping camera rotation'); // Debug log
+      console.log('Left-click up - stopping camera rotation'); // Debug log
     };
 
     const handleMouseMove = (e) => {
